@@ -22,8 +22,10 @@ header img {
 }
 
 nav {
-    background-color: #6aeb70;
+    background-color: #e9eeea;
     text-align: center;
+    font-weight: bold;
+    color:blue
 }
 
 ul {
@@ -45,6 +47,7 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
     font-family: verdana;
+    margin: 4px;
     
 }
 
@@ -95,7 +98,8 @@ footer {
 
 .site-navigation,
 .contact-info {
-    width: 45%;
+    font-size: 15px;
+    font-display:inherit;
 }
 
 .site-navigation ul,
