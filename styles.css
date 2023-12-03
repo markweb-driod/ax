@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
+    overflow-x: hidden; /* Prevent horizontal scroll on smaller screens */
 }
 
 header {
@@ -15,44 +16,49 @@ header {
 }
 
 header img {
-    max-width: 50px;
+    max-width: 100px;
     margin-right: 10px;
+    
 }
 
 nav {
-    background-color: #444;
+    background-color: #6aeb70;
+    text-align: center;
 }
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
 }
 
 li {
-    float: left;
+    margin: 0;
 }
 
 li a {
     display: block;
-    color: white;
+    color: blue;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-}
-
-/* Added styling for active navigation link */
-li.active a {
-    background-color: #555;
+    font-family: verdana;
+    
 }
 
 main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.background-section {
+    background-image: url('img/bg.jpeg'), url('img/BG2.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 60px;
+    text-align: center;
 }
 
 #testimonials {
@@ -78,11 +84,12 @@ main {
 }
 
 footer {
-    background-color: #333;
+    background-color: rgb(53, 51, 51);
     color: #fff;
     text-align: center;
     padding: 1em;
     display: flex;
+    font-family: verdana;
     justify-content: space-between;
 }
 
@@ -93,17 +100,17 @@ footer {
 
 .site-navigation ul,
 .contact-info {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+   font-family: verdana;
+   text-decoration: wavy;
+   list-style: none;
 }
 
 .site-navigation a {
-    color: #fff;
+    color: #f00808;
     text-decoration: none;
 }
 
 .contact-info a {
-    color: #fff;
+    color: #ff0000;
     text-decoration: underline;
 }
