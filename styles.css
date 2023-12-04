@@ -86,38 +86,6 @@ main {
     cursor: pointer;
 }
 
-footer {
-    background-color: rgb(53, 51, 51);
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-    display: flex;
-    font-family: verdana;
-    justify-content: space-between;
-}
-
-.site-navigation,
-.contact-info {
-    font-size: 15px;
-    font-display:inherit;
-}
-
-.site-navigation ul,
-.contact-info {
-   font-family: verdana;
-   text-decoration: wavy;
-   list-style: none;
-}
-
-.site-navigation a {
-    color: #f00808;
-    text-decoration: none;
-}
-
-.contact-info a {
-    color: #ff0000;
-    text-decoration: underline;
-}
 .dynamic-image {
     margin-top: 20px;
     text-align: center;
@@ -130,3 +98,49 @@ footer {
     margin-bottom: 20px;
     border-style:solid;
 }
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+
+.center img {
+    width: 30px;
+    height: 30px;
+}
+.con{
+    font-family:verdana;
+    text-justify: distribute;
+    background-image: url();
+
+}
+    .contact{
+        background-image: url(bgs/cb.jpg);
+        height: 300px;
+        padding-top: 20px;
+        color: #ddd;
+        font-family: cambria;
+        font-size: large;
+        text-align: center;
+    }
+    .foo{
+        background-image: url(bgs/foot.jpeg);
+        height: 50px;
+        text-align: center;
+        padding-top: 5px;
+        font-family: verdana;
+    }
+    .crypto{
+      background-color: #f5f5f5;
+        background-size: cover;
+    }
+    .tr{
+        background-image: url(bgs/clog.jpg);
+        height: 100%;
+        width: 50%;
+        background-size: cover;
+        text-align: center;
+        align-items: center;
+    }
