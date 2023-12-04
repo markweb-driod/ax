@@ -76,12 +76,12 @@ main {
 
 .contact-icons {
     position: fixed;
-    right: 10px;
+    right: 20px;
     bottom: 10px;
 }
 
 .contact-icons img {
-    width: 40px;
+    width: 60px;
     margin-bottom: 10px;
     cursor: pointer;
 }
@@ -124,8 +124,9 @@ footer {
 }
 
 .dynamic-image img {
-    max-width: 100%;
-    border: 1px solid #ddd;
+    max-width: 50%;
+    border: 1px solid #3604eb;
     border-radius: 8px;
     margin-bottom: 20px;
+    border-style:solid;
 }

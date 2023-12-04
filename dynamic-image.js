@@ -8,22 +8,22 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to set the dynamic image based on the current day
     function setDynamicImage() {
         const dayOfWeek = getDayOfWeek();
-        const dynamicImage = document.querySelector('.dynamic-image img');
+        const dynamicImage = document.querySelector('dynamic-image');
 
         // Set image source based on the day
         switch (dayOfWeek) {
             case 0: // Sunday
-                dynamicImage.src = 'img/sunday-image.jpg';
+                dynamicImage.src = "Sunday-sunday.jpeg";
                 break;
             case 1: // Monday
-                dynamicImage.src = 'img/monday-image.jpg';
+                dynamicImage.src = 'monday-monday.jpeg';
                 break;
             case 5: // Friday
-                dynamicImage.src = 'img/friday-image.jpg';
+                dynamicImage.src = 'friday-image.jpeg';
                 break;
             default:
                 // Use a default image for other days
-                dynamicImage.src = 'img/default-image.jpg';
+                dynamicImage.src = 'daily.jpeg';
                 break;
         }
     }
