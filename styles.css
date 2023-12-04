@@ -118,3 +118,14 @@ footer {
     color: #ff0000;
     text-decoration: underline;
 }
+.dynamic-image {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.dynamic-image img {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
