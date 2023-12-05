@@ -19,5 +19,5 @@ document.addEventListener('DOMContentLoaded', function () {
     showTestimonial(currentTestimonial);
 
     // Change testimonial every 5 seconds
-    setInterval(changeTestimonial, 5000);
+    setInterval(changeTestimonial, 10000);
 });

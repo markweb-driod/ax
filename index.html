@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
-    <script src="dynamic-image.js" defer></script>
+    <script src="dynamic-image.js"></script>
+
+<script src="dateDisplay.js" defer></script>
+
     <script src="https://kit.fontawesome.com/b87e39db14.js" crossorigin="anonymous"></script>
     <title>AX_CHANGE</title>
 </head>
@@ -24,27 +27,46 @@
             <li><a href="tradecrypt.html">Trade Crypto</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+        <p id="currentDate" style="font-size: 15px; color: rgb(10, 10, 10); text-align: right;"></p
     </nav>
 
     <!-- Dynamic Image Section -->
     <div class="dynamic-image" id="dynamicImage">
-        <img src="daily.jpeg" alt="Dynamic Testimonial Image" ">
+        <img src="" alt="Dynamic Testimonial Image">
        
     </div>
-
+    <div class="testimony">
     <main>
         <!-- Testimonials Section -->
         <section id="testimonials" class="background-section">
-            <h2>Customer Testimonials</h2>
+            <h2> Our Customer Testimonials</h2>
             <div class="testimonial" id="testimonial1">
-                <p>Customer testimony goes here.</p>
+                <p>Ngozi E., Tech Enthusiast:
+                    *“For a tech lover like me, this platform ticks all the boxes. Fast crypto trades and gift card conversions. Nigerian users, if you're into tech or just want a smooth experience, give it a shot!”</p>
             </div>
             <div class="testimonial" id="testimonial2">
-                <p>Another customer testimony goes here.</p>
+                <p>Ibrahim M., Student Trader:
+                    *“Being a student, I needed a side hustle. This site helped me turn gift cards into cash. Quick payouts, simple interface. Perfect for Nigerian students looking to earn extra.”</p>
+            </div>
+            <div class="testimonial" id="testimonial3">
+                <p> Fatima A., Fashion Blogger:
+                    *“Needed a way to monetize unused gift cards. This platform is a gem! Converted them to crypto for online shopping. Nigerian users, you've got to try this – it's a game-changer!”</p>
+            </div>
+            <div class="testimonial" id="testimonial4">
+                <p> Emeka O., Crypto Novice:
+                    *“As a beginner in crypto, this site made it simple. Traded my first gift card for crypto hassle-free. Nigerian-friendly and quick customer support. Happy customer here!”</p>
+            </div>
+            <div class="testimonial" id="testimonial5">
+                <p> Chika N., Lagos Entrepreneur:
+                    *“This platform is a game-changer for Nigerian users. Quick crypto trades and easy gift card transactions have made it my one-stop-shop. The local support team adds a personal touch. Highly recommend to fellow entrepreneurs!”</p>
+            </div>
+            <div class="testimonial" id="testimonial6">
+                <p>Oracle O., Naija Crypto Ninja:
+                    “Listen up, folks! This platform is the real oracle of the Nigerian crypto scene. I've been flipping gift cards and riding the crypto wave like a pro. Fast, smooth, and pure Naija style. If you're not on this vibe, you're missing the crypto party of the century, my people!”  </p>
             </div>
             <!-- Add more testimonials as needed -->
         </section>
-
+    </div>
         <!-- WhatsApp and Telegram Icons -->
         <div class="contact-icons">
             <a href="whatsapp-link" target="_blank"><img src="img/whatsapp.png" alt="WhatsApp"></a>
@@ -54,10 +76,11 @@
     </main>
 
    
-    s<div class = "foo">
+    <div class = "foo">
         <footer  >
         <p style="font-family: verdana; color:white; text-decoration: solid;"> (c) 2023 Powered by <a href="###" style="font-family: verdana; color: white;font-weight: bold;"> SHRINE </a></p>
-     </footer>
+            <p id="currentDate"></p>
+    </footer>
     </div>
 
 </body>
