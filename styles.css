@@ -99,15 +99,17 @@ main {
 
 .dynamic-image {
     margin-top: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 .dynamic-image img {
     max-width: 50%;
-    border: 1px solid #3604eb;
+    border: 1px solid #fcfcfd;
     border-radius: 8px;
     margin-bottom: 20px;
     border-style:solid;
+   
+    
 }
 
 .center {
@@ -157,4 +159,58 @@ main {
     background-size: cover;
     text-align: center;
     align-items: center;
+}
+.offer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow items to wrap to the next line if the container is too small */
+}
+
+.offer-item {
+    text-align: center;
+    margin-bottom: 20px;
+    flex: 0 0 30%; /* Adjust the width of each item as needed */
+}
+
+.offer-item img {
+    max-width: 100px; /* Adjust the max-width as needed */
+    margin-bottom: 10px;
+}
+
+.offer-item p {
+    font-family: verdana;
+    font-size: 14px;
+}
+.offer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.offer-item {
+    text-align: center;
+    margin-bottom: 20px;
+    flex: 0 0 30%;
+}
+
+.offer-item img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.offer-item p {
+    font-family: verdana;
+    font-size: 16px;
+    border-right-style:inset;
+}
+.first{
+    font-size: 20px;
+    color: rgb(246, 246, 248);
+    font-family:tahoma;
+    font-weight: bold;
+   background-image: url(bgs/t1.jpg);
+   height: 500px;
+    text-align: center;
+    padding-top: 7px;
+    
 }
