@@ -10,7 +10,7 @@ header {
     background-image: url(bgs/hhbb.jpg);
     color:yellow;
     text-align: center;
-    padding: 1em;
+    padding: 2em;
     display: flex;
     align-items: center;
     
@@ -107,7 +107,7 @@ main {
 }
 
 .dynamic-image img {
-    max-width: 50%;
+    max-width: 80%;
     border: 1px solid #fcfcfd;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -284,7 +284,8 @@ main {
 
   .image-container img {
     width: 250px; 
-    padding-right: 14px;/* Make sure the images take up the full width of their container */
+    padding-right: 14px;
+    border-radius: 8px;/* Make sure the images take up the full width of their container */
   }
 
   .image-text {
