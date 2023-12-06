@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
     <script src="dynamic-image.js"></script>
-
+<div class="timer">
 <script src="dateDisplay.js" defer></script>
+</div>
 
     <script src="https://kit.fontawesome.com/b87e39db14.js" crossorigin="anonymous"></script>
     <title>AX_CHANGE</title>
@@ -16,40 +17,50 @@
 
     <header>
         <img src="img/logo.jpg" alt="Site Logo">
-        <h1 style="display: flex; font-family: courier new;font-size: 40px;">AXCHANGE </h1>
+        <h1 style="display: flex; font-family: courier new;font-size: 40px;">AXCHANGE</h1>
     </header>
 
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="payment.html">Get Payment</a></li>
-            <li><a href="tradegift.html">Trade Giftcard</a></li>
-            <li><a href="tradecrypt.html">Trade Crypto</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="payment.html">PAYMENT TAGS</a></li>
+            <li><a href="tradegift.html">TRADE</a></li>
+           
+            <li><a href="contact.html">CONTACT</a></li>
         </ul>
-        <p id="currentDate" style="font-size: 15px; color: rgb(10, 10, 10); text-align: right;"></p>
+        
     </nav>
+    <p id="currentDate" style="font-size: 15px; color: rgb(10, 10, 10); text-align: right;"></p>
     <br>
     <br>
 
-    <div class="first">
-      <p style="font-size: 34px;">Welcome to AXCHANGE</p>
-     <p>Trade your Giftcard and Crypto with us today at amazing rates</p>
-        
-    </div>
+    <!-- Inside the <div class="first"> element -->
+<div class="first">
+    <p style="font-size: 34px;">Welcome to AXCHANGE</p>
+    <p>Trade your Giftcard and Crypto with us today at amazing rates</p>
+    <p>Payment Tags Available</p>
+    <a href="http://wa.me/+2348168473898" id="tradeLink" onclick="displayTradeMessage()"> <!-- Replace "#" with your actual link -->
+      <button id="tradeButton">Trade Now</button>
+    </a>
+    <p id="trade-message" style="display: none; font-size: 20px; color: #333;">Let's trade!</p>
+  </div>
+  
 <div class="dynamic-image" id="dynamicImage">
     <img src="" alt="Dynamic Testimonial Image">
     <h2 style="font-family:verdana; font-size: 20px;text-align: center;text-decoration:underline"> WE OFFER YOU THE FOLLOWING</h2>
     <br>
     <hr>
     <br>
+    <!-- Inside the <body> tag, wherever you want the second button to appear -->
+
+  
     <div class="offer-container">
         <div class="offer-item">
             <img src="bgs/secure.png" alt="Image 1">
             <p>✨ Your Transactions, Our Assurance! ✨
 
                 Shop, trade, and succeed worry-free with AXCHANGE! Your security is our top priority, guaranteeing every transaction's success. Trust in us for a seamless and secure experience. 💳🛡️ #SafeTrading #AXCHANGEConfidence
-                </p>
+                
         </div>
         <div class="offer-item">
             <img src="bgs/ch.png" alt="Image 2">
@@ -68,6 +79,13 @@ AXCHANGE ensures your safety with ironclad security, reliable service, and light
        
     </div>
 </div>
+<div class="second">
+    <p style="font-size: 24px; font-family: verdana; font-weight: bold;">Enjoy hassle-free Transaction<sub style="font-size: 9px; color:blue">Trading excellence starts here</sub></p>
+    <a href="http://wa.me/+2348168473898" id="tradeLinkSecond" onclick="displayTradeMessageSecond()">
+    <button id="tradeButtonSecond">Trade Now</button>
+    </a>
+    <p id="trade-message-second" style="display: none; font-size: 18px; color: #333;">Let's explore!</p>
+  </div>
 
     <div class="testimony">
     <main>
@@ -81,7 +99,7 @@ AXCHANGE ensures your safety with ironclad security, reliable service, and light
             </div>
             <div class="testimonial" id="testimonial2">
                 <p>Ibrahim :
-                    *“Being a student, I needed a side hustle. This site helped me turn gift cards into cash. Quick payouts, simple interface. Perfect for Nigerian students looking to earn extra.”</p>
+                    *“Being a student, I needed a side hustle. This site helped me turn gift cards into cash. Quick payouts, simple interface.”</p>
             </div>
             <div class="testimonial" id="testimonial3">
                 <p> Pablo: 
@@ -101,7 +119,9 @@ AXCHANGE ensures your safety with ironclad security, reliable service, and light
             </div>
             <!-- Add more testimonials as needed -->
         </section>
+
     </div>
+        
         <!-- WhatsApp and Telegram Icons -->
         <div class="contact-icons">
             <a href="whatsapp-link" target="_blank"><img src="img/whatsapp.png" alt="WhatsApp"></a>
@@ -113,10 +133,25 @@ AXCHANGE ensures your safety with ironclad security, reliable service, and light
    
     <div class = "foo">
         <footer  >
-        <p style="font-family: verdana; color:white; text-decoration: solid;"> (c) 2023 Powered by <a href="###" style="font-family: verdana; color: white;font-weight: bold;"> SHRINE </a></p>
+        <p style="font-family: verdana; color:white; text-decoration: solid;"> (c) AXCHANGE 2023 Powered by <a href="###" style="font-family: verdana; color: white;font-weight: bold;"> SHRINE </a></p>
             <p id="currentDate"></p>
     </footer>
     </div>
-
+    
+<!-- Inside the <script> tag or in your script.js file -->
+    <!-- Inside the <script> tag or in your script.js file -->
+<script>
+    function displayTradeMessage() {
+      var tradeMessage = document.getElementById("trade-message");
+      tradeMessage.style.display = "block";
+  
+      // Hide the message after 3 seconds (adjust the duration as needed)
+      setTimeout(function() {
+        tradeMessage.style.display = "none";
+      }, 3000);
+    }
+  </script>
+  
+      
 </body>
 </html>

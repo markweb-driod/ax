@@ -7,21 +7,22 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-image: url(bgs/hhbb.jpg);
+    color:yellow;
     text-align: center;
     padding: 1em;
     display: flex;
     align-items: center;
+    
 }
 
 header img {
-    max-width: 100px;
+    max-width: 130px;
     margin-right: 10px;
 }
 
 nav {
-    background-color: #e9eeea;
+    background-color: #e9be02;
     text-align: center;
     font-weight: bold;
 }
@@ -39,8 +40,9 @@ li {
 }
 
 li a {
+    font-family: verdana;
     display: block;
-    color: blue;
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -50,12 +52,12 @@ li a {
 }
 
 li a:hover {
-    background-color: #ddd; /* Change background color on hover */
+    background-color: #fffefe; /* Change background color on hover */
 }
 
 li a.active {
-    background-color: #4CAF50; /* Set a different background color for the active button */
-    color: white; /* Change text color for the active button */
+    background-color: #00da07; /* Set a different background color for the active button */
+    color: rgb(78, 6, 6); /* Change text color for the active button */
 }
 
 main {
@@ -99,7 +101,7 @@ main {
 
 .dynamic-image {
     margin-top: 20px;
-    text-align: left;
+    text-align: center;
 }
 
 .dynamic-image img {
@@ -209,8 +211,53 @@ main {
     font-family:tahoma;
     font-weight: bold;
    background-image: url(bgs/t1.jpg);
-   height: 500px;
+   height: 300px;
     text-align: center;
     padding-top: 7px;
     
 }
+#tradeButton {
+    display: inline-block;
+    padding: 15px 30px; /* Adjust padding to increase button size */
+    font-size: 18px; /* Adjust font size if needed */
+    text-align: center;
+    text-decoration: none;
+    background-color: #e9be02; /* Blue color */
+    color: #fff;
+    border: none;
+    border-radius: 8px; /* Adjust border radius for rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Add margin for spacing */
+}
+  
+  #tradeButton:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  .second {
+    text-align: center;
+    margin-top: 50px; /* Adjust margin for spacing */
+  }
+  
+  #tradeButtonSecond {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ff9800; /* Orange color */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #tradeButtonSecond:hover {
+    background-color: #e08a00; /* Darker orange on hover */
+  }
+  .timer{
+    text-align: right;
+    font-family: verdana;
+    font-weight: bold;
+  }
