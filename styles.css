@@ -208,14 +208,14 @@ main {
     border-right-style:inset;
 }
 .first{
-    font-size: 15px;
-    color: rgb(246, 246, 248);
-    font-family:tahoma;
+    font-size: 17px;
+    color: #f6f6f8;
+    font-family:verdana;
     font-weight: bold;
    background-image: url(bgs/t1.jpg);
    height: 300px;
     text-align: center;
-    padding-top: 7px;
+    padding-top: 15px;
     
 }
 #tradeButton {
