@@ -132,11 +132,11 @@ main {
 }
 
 .contact {
-    background-image: url(bgs/cb.jpg);
+    background-image: url(bgs/t2.jpg);
     height: 300px;
     padding-top: 20px;
-    color: #ddd;
-    font-family: cambria;
+    color: #0f0f0f;
+    font-family: verdana;
     font-size: large;
     text-align: center;
 }
@@ -271,4 +271,20 @@ main {
     font-weight: bolder;
     text-decoration: underline;
     
+  }
+  .image-container {
+    text-align: center;
+    margin: 20px;
+    display:inline-block;
+    align-items: center;
+    text-align: center;
+  }
+
+  .image-container img {
+    width: 250px; 
+    padding-right: 14px;/* Make sure the images take up the full width of their container */
+  }
+
+  .image-text {
+    margin-top: 10px;
   }
