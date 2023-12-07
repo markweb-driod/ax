@@ -292,4 +292,29 @@ main {
 
   .image-text {
     margin-top: 10px;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: black;
   }
+  .container {
+    text-align: center;
+  }
+  
+  img {
+    max-width: 70%;
+    max-height: 70%;
+    border-radius: 20px;
+  }
+  
+  p {
+    margin-top: 15px; /* Adjust as needed to create space between image and text */
+    font-family: verdana;
+    font-weight: bold;
+    font-size: 13px;
+}
+.wor {
+    margin-top: 15px; /* Adjust as needed to create space between image and text */
+    font-family: verdana;
+    font-weight: bold;
+    font-size: 13px;
+}
