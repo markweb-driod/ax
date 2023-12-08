@@ -267,13 +267,14 @@ main {
   }
   .pac{
     text-align: center;
-    padding-top:15px;
+    padding-top:12px;
     font-family: Verdana;
     color: blue;
     text-transform: uppercase;
     font-size: 23px;
     font-weight: bolder;
-    text-decoration: underline;
+    
+   
     
   }
   .image-container {
@@ -317,4 +318,8 @@ main {
     font-family: verdana;
     font-weight: bold;
     font-size: 13px;
+}
+.seke{
+    justify-content: center;
+    text-align: center;
 }
