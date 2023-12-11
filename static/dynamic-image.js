@@ -18,6 +18,12 @@ document.addEventListener('DOMContentLoaded', function () {
             case 1: // Monday
                 dynamicImage.src = 'monday.jpg';
                 break;
+                case 2: // Tuesday
+                dynamicImage.src = 'tuesday.jpg';
+                break;
+                case 5: // wednesday
+                dynamicImage.src = 'wednesday.jpg';
+                break;
             case 5: // Friday
                 dynamicImage.src = 'friday.jpg';
                 break;
