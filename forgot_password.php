@@ -1,25 +1,4 @@
-<?php
-session_start();
-include("db_connect.php");
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST["username"];
-    $password = password_hash($_POST["password"], PASSWORD_BCRYPT);
-
-    $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
-
-    if ($conn->query($sql) === TRUE) {
-        echo '<script>showNotification("Registration successful. You can now login.", "success");</script>';
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-    
-}
-
-$conn->close();
-?>
-
-<!-- HTML form for registration -->
+<!-- forgot_password.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,28 +26,18 @@ $conn->close();
             <li><a href="contact.html">CONTACT</a></li>
         </ul>
         
-    </nav>
-    <div id="notification-container" class="hidden">
-        <div id="notification" class="success">
-            <p id="notification-message">Registered Successfully! Please login</p>
-            <span id="close-notification">&times;</span>
-        </div>
-    </div>
-
+    </nav>>
     <div class="ahh">
-        <div class="container">
-    <h2>Register</h2>
-    <form action="register.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" name="username" required>
-
-        <label for="password">Password:</label>
-        <input type="password" name="password" required>
-
-        <button type="submit">Register</button>
+    <div class="container">
+    
+    <h2>Forgot Password</h2>
+    <form action="send_reset_link.php" method="post">
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+        <button type="submit">Reset Password</button>
     </form>
-    <p>Already have an account? <a href="login.php">Login here</a>.</p>
-        </div>
+
+    </div>
     </div>
 
      <!-- WhatsApp and Telegram Icons -->
@@ -84,7 +53,5 @@ $conn->close();
         <p style="font-family: verdana; color:white; text-decoration: solid;"> (c) 2023 Powered by <a href="###" style="font-family: verdana; color: white;font-weight: bold;"> SHRINE </a></p>
      </footer>
     </div>
-
-
 </body>
 </html>

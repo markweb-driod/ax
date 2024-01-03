@@ -68,6 +68,7 @@ $conn->close();
 
             <button type="submit">Login</button>
         </form>
+        <p>Forgot password? <a href="forgot_password.php">Reset password</a>.</p>
         <p>Don't have an account? <a href="register.php">Register here</a>.</p>
     </div>
 

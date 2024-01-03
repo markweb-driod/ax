@@ -1,7 +1,7 @@
 <?php
 $servername = "127.0.0.1:3377";
 $username = "root";
-$password = "(60813322@))";
+$password = "(60813322@)";
 $database = "rift";
 
 // Create connection
