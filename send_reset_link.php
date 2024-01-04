@@ -1,7 +1,7 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\src\SMTP;
+use PHPMailer\PHPMailer\src\Exception;
 
 require 'PHPMailer/PHPMailer/src/Exception.php';
 require 'PHPMailer/PHPMailer/src/PHPMailer.php';
@@ -30,21 +30,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("si", $token, $user["id"]);
         $stmt->execute();
 
+       
+
+
         // Send reset link via email using PHPMailer
-        $resetLink = "http://austinexchange.store/reset_password.php?token=$token";
+        $resetLink = "https://austinexchange.store/reset_password.php?token=$token";
 
         // Email configuration
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = 'mail.austinexchange.store'; // Replace with your SMTP server
+        $mail->Host = 'smtp.gmail.com'; // Replace with your SMTP server
         $mail->SMTPAuth = true;
-        $mail->Username = 'austin@austinexchange.store'; // Replace with your email
-        $mail->Password = '(60813322@Mail)'; // Replace with your email password
+        $mail->Username = 'markishayajatau007@gmail.com'; // Replace with your email
+        $mail->Password = 'czqofjxdkmnxyiew'; // Replace with your email password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = 465;
+        $mail->Port = 587;
 
         // Email content
-        $mail->setFrom('@Austin@austinexchange.store', 'Austin'); // Replace with your name and email
+        $mail->setFrom('Austin@austinexchange.store', 'Austin'); // Replace with your name and email
         $mail->addAddress($email);
         $mail->Subject = 'Password Reset';
         $mail->Body = "Click the following link to reset your password: $resetLink";
