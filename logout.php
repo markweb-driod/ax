@@ -1,13 +1,14 @@
 <?php
 session_start();
 
-// Unset all session variables
-$_SESSION = array();
-
-// Destroy the session
-session_destroy();
-
-// Redirect to the login page after logout
-header("Location: login.php");
-exit();
+if (isset($_POST['logout'])) {
+    session_unset(); // Clear all session data
+    session_destroy(); // Destroy the session
+    header("Location: login.php"); // Redirect to the login page or any other page
+    exit;
+} else {
+    // Redirect to the login page if the logout button is not pressed
+    header("Location: login.php");
+    exit;
+}
 ?>
