@@ -93,7 +93,7 @@ main {
 
 .contact-icons {
     position: fixed;
-    right: 20px;
+    right:10px;
     bottom: 10px;
 }
 
@@ -147,7 +147,7 @@ main {
 
 .foo {
     background-image: url(bgs/foot.jpeg);
-    height: 50px;
+    height: 20px;
     text-align: center;
     padding-top: 5px;
     font-family: verdana;
