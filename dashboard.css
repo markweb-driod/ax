@@ -39,28 +39,134 @@ header {
 .na{
 text-align: right;
 padding-right: 7px ;
+height: 7px;
 
 }
 
 .name{
 
-text-align: center;
-background-color: rgb(252, 210, 22);
-height: 60px;
+text-align: left;
+background-image: url(bgs/login2.jpg);
+display: inline-block;
+height: 50px;
 font-family: verdana;
-ba
-
-
+font-size: 10px;
+padding: 3px 7px;
+border-radius: 8px;
 }
 button {
-    background-color: #3498db; /* Blue color */
+    background-color: rgb(238, 3, 3); /* Blue color */
     color: #fff; /* White text color */
     padding: 10px 20px; /* Padding for better visual */
-    border: none;
     border-radius: 5px; /* Curved corners */
     cursor: pointer;
+    height: 40px;
+    border-color: rgb(193, 196, 11);
 }
 
 button:hover {
     background-color: #2980b9; /* Darker blue color on hover */
+}
+.whats{
+    padding-left: 37px;
+    padding-top: 4px;
+    font-size: 20px;
+    font-family: verdana;
+}
+
+.avd{
+    color: rgb(235, 187, 33);
+    
+    font-family:  verdana;
+    font-weight: bold;
+    padding-left: 37px;
+    font-size: 20px;
+}
+
+.contact-icons {
+    position: fixed;
+   margin-bottom: 40px;
+   
+}
+
+.contact-icons img {
+    width: 60px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding-bottom:53px;
+}
+
+.image-contai {
+    display: flex;
+ 
+}
+
+.image-contai img {
+    align-items: center;
+    padding-left: 22px;
+    height: 60px;
+    width: 60px; /* Adjust the width as needed */
+    margin-right: 10px; /* Adjust the margin between images as needed */
+}
+.butt{
+    font-family: verdana;
+    font-weight: bold;
+}
+
+.wel{
+    font-size: 8px;
+    background-color: rgb(233, 202, 27);
+    height:35px;
+    width:180px;
+    padding-top: 1px;
+    padding-left: 25px;
+    display: inline-block;
+    border-radius: 7px;
+
+}
+
+.logout{
+    text-align: right;
+    padding-right: 7px;
+}
+.our{
+    text-align: center;
+   background-color: black;
+    padding-top:3px;
+    color: yellow;
+    
+}
+   .channel{
+
+    height:350px;
+    padding-top: 25px;
+    text-align: center;
+    font-family: Verdana;
+    color:white;
+    background-image: url(bgs/foot.jpeg); 
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ; /* Adjust the height as needed */
+}
+
+.icon {
+    margin: 0 10px; /* Adjust the margin between icons as needed */
+}
+
+.icon img {
+    width: 80px; /* Adjust the width of the icons as needed */
+    height: 50px; /* Adjust the height of the icons as needed */
+}
+.chan{
+    text-align: center;
+    font-size: 15px;
+    font-family: verdana;
+}
+.chan img{
+    width: 100px;
+    height: auto;
 }

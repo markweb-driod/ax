@@ -48,11 +48,7 @@ $conn->close();
         </ul>
         
     </nav>
-    <div id="notification-container" class="hidden">
-        <div id="notification" class="success">
-            <p id="notification-message">Registered Successfully! Please login</p>
-            <span id="close-notification">&times;</span>
-        </div>
+   
     </div>
 
     <div class="ahh">

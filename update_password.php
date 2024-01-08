@@ -13,18 +13,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($result) {
         // Password updated successfully
-        echo "Password updated successfully.";
+        $_SESSION['success_message'] = "Password updated successfully.";
         
-        // You can redirect the user to the login page or any other page after successful password update
+        // Redirect the user to the login page or any other page after successful password update
         header("Location: login.php");
         exit;
     } else {
         // Error updating password
-        echo "Error updating password. Please try again.";
+        $_SESSION['error_message'] = "Error updating password. Please try again.";
+        header("Location: reset_password.php?token=$token");
+        exit;
     }
 } else {
     // Invalid request method
-    echo "Invalid request method.";
+    $_SESSION['error_message'] = "Invalid request method.";
+    header("Location: reset_password.php?token=$token");
+    exit;
 }
 
 $conn->close();

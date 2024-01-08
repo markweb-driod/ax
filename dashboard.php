@@ -17,6 +17,7 @@ if (!isset($_SESSION['username'])) {
     <link rel="stylesheet" href="dashboard.css">
     <script src="script.js"></script>
     <script src="static/dynamic-image.js"></script>
+    <script src="static/datedisplay.js"></script>
     <script src="dynamic-image.js" defer></script>
     <title>AX_CHANGE</title>
     <script src="//code.jivosite.com/widget/znWBHX9sZo" async></script>
@@ -31,41 +32,109 @@ if (!isset($_SESSION['username'])) {
     <nav style="background-color: #e9be02; color:black">
         <ul>
             <li><a href="dashboard.php">HOME</a></li>
-            <li><a href="payment.html">Trades</a></li>
-            <li><a href="tradegift.html">Profile</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="payment.php">Trades</a></li>
+            <li><a href="Profile.php">Profile</a></li>
+            <li><a href="contact.php">Contact</a></li>
         </ul>
         
-    </nav><br>
-    <div class="na">
-  
+    </nav>
+    <p id="currentDate" style="font-family:serif;font-size: 15px; color: rgb(10, 10, 10); text-align: right; padding-right:5px"></p>
+
+    <br>
+     
+
+        <div class="wel">
+             <h1 >Welcome, <?php echo $_SESSION['username']; ?></h1>
+       </div>
+
+
+   <div class="logout">
     <form action="logout.php" method="post">
-                <button type="submit" name="logout">Logout</button>
+               <p>Logout <button type="submit" name="logout"><img src="bgs/logout.png" style="height: 450px;width:30px"></button>
             </form>
-    </div>
-            <div class="name">
-  
-           
-            <h1 style="padding-top: 9px;" >Welcome, <?php echo $_SESSION['username']; ?></h1>
-         </div>
+   </div>
+    
+<div class="chan">
+    
+<div class="channel">
+<h3 style="text-align: center; font-size:25px;color:yellow ; text-decoration:underline"> What Would You Trade Today? </h3>
 
-         <div class="dynamic-image" id="dynamicImage">
-             <img src="" alt="Dynamic Testimonial Image">
-         </div>
+ <p style="font-size: 24px;">Trade Bitcoin 
    
-         <div class="contact-icons">
-            <a href="http://wa.me/+2348168473898" target="_blank"><img src="img/whatsapp.png" alt="WhatsApp"></a>
-            <br>
-            <a href="https://t.me/Austinxchange" target="_blank"><img src="img/telegram.png" alt="Telegram"></a>
-        </div>
 
-
+    <p style="font-size: 24px;">Trade Giftcards 
     
 
-</body>
+    <p style="font-size: 24px;">Trade Paypal & Other Funds <br> <br>
+    <a href="http://wa.me/+2348168473898"  onclick="displayTradeMessage()">
+      <button >Trade Now</button>
+    </a>
+    </div>
+
+</div>
+        
+<div class="image-container">
+       
+        <div>
+            <img src="bgs/trust.png" alt="Image 3">
+            <p>We are legit, and trusted</p>
+        </div>
+        <div>
+            <img src="bgs/seal0.png" alt="Image 2">
+            <p>We offer reliable zero failure</p>
+        </div>
+
+        <div>
+            <img src="bgs/secure.png" alt="Image 1">
+            <p>We offer fast secured transaction </p>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="our">
+            <h2> Trade With Us Via Our Channels: </h2> 
+            <div class="social-icons">
+        <a href="#" class="icon"><img src="img/whatsapp.png" alt="Facebook"></a>
+        <a href="#" class="icon"><img src="img/telegram.png" alt="Twitter"></a>
+        <a href="#" class="icon"><img src="img/instagram.png" alt="Instagram"></a>
+        </div> 
+        <br>
+        <h4>Access us via our online 24hr chat below:</h4>
+
+</div>
+
+
+
+
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+           
+        }
+
+        .image-container img {
+            font-family: courier;
+            width: 160px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 10px; /* Adjust the margin between image and text */
+        }
+
+        .image-container div {
+            text-align: center;
+        }
+
+    </style>
+
 <div class = "foo">
         <footer  >
-        <p style="font-family: verdana; color:white; text-decoration: solid;"> (c) 2023 Powered by <a href="###" style="font-family: verdana; color: white;font-weight: bold;"> SHRINE </a></p>
-     </footer>
+        <p style="font-family: verdana; color:white; text-decoration: solid;"> (c) AXCHANGE 2023 Powered/Built by <a href="https://wa.me/qr/WZDSRJESKMKPD1" style="font-family: verdana; ;font-weight: bold;color:yellow"> SHRINE </a></p>
+            <p id="currentDate"></p>
+    </footer>
     </div>
+</body>
 </html>
