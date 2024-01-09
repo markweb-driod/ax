@@ -60,11 +60,13 @@
     </div>
     </div>
 
-    <div class = "foo">
-        <footer  >
-        <p style="font-family: verdana; color:white; text-decoration: solid;"> (c) 2023 Powered by <a href="###" style="font-family: verdana; color: white;font-weight: bold;"> SHRINE </a></p>
-     </footer>
-    </div>
+    <div class="foo">
+    <footer style="background-color: black; padding: 10px 0; text-align: center;">
+        <p style="font-family: 'Verdana', sans-serif; color: white; margin: 0;">
+           AXCHANGE (c) 2023 Powered by <a href="###" style="font-family: 'Verdana', sans-serif; color: yellow; font-weight: bold; text-decoration: none;">SHRINE</a>
+        </p>
+    </footer>
+</div>
 
 </body>
 </html>
