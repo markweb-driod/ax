@@ -45,20 +45,21 @@ input {
 }
 
 button {
-    text-align: center;
-    padding: 10px ;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
     background-color: #3498db;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 10px; /* Added margin-top to center the button */
+    margin-top: 10px;
 }
 
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #050505;
 }
 
 .link {
@@ -68,10 +69,32 @@ button:hover {
 }
 
 .link a {
-    color: #3498db;
+    color: #db3434;
     text-decoration: none;
 }
 
 .link a:hover {
     text-decoration: underline;
+}
+.notification {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+}
+
+.error {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+.success {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+.pint img{
+    text-align: right;
+    height: 30px;
+    width:30;
 }

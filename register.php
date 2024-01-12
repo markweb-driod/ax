@@ -3,39 +3,37 @@ session_start();
 include("db_connect.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["username"];
+    $password = password_hash($_POST["password"], PASSWORD_BCRYPT);
     $full_name = $_POST["full_name"];
     $email = $_POST["email"];
     $phone_number = $_POST["phone_number"];
-    $username = $_POST["username"];
-    $password = password_hash($_POST["password"], PASSWORD_BCRYPT);
 
-    $sql = "INSERT INTO users (full_name, email, phone_number, username, password) VALUES ('$full_name', '$email', '$phone_number', '$username', '$password')";
+    // Check if email, username, or phone number already exists
+    $checkQuery = "SELECT id FROM users WHERE email = ? OR username = ? OR phone_number = ?";
+    $checkStmt = $conn->prepare($checkQuery);
+    $checkStmt->bind_param("sss", $email, $username, $phone_number);
+    $checkStmt->execute();
+    $checkResult = $checkStmt->get_result();
 
-    if ($conn->query($sql) === TRUE) {
-        // Registration successful, trigger JavaScript to show a pop-up
-        echo '<script>
-                showNotification("Registration successful. You can now login.", "success");
-                setTimeout(function(){
-                    closeNotification(); // Close the pop-up after 3 seconds
-                }, 3000);
-              </script>';
+    if ($checkResult->num_rows > 0) {
+        echo '<div class="notification error">Email, username, or phone number is already in use.</div>';
     } else {
-        // Error in registration, trigger JavaScript to show a pop-up
-        echo '<script>
-                showNotification("Error: ' . $conn->error . '", "error");
-                setTimeout(function(){
-                    closeNotification(); // Close the pop-up after 3 seconds
-                }, 3000);
-              </script>';
+        // Insert new user
+        $sql = "INSERT INTO users (username, password, full_name, email, phone_number) VALUES (?, ?, ?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("sssss", $username, $password, $full_name, $email, $phone_number);
+
+        if ($stmt->execute()) {
+            echo '<div class="notification success">Registration successful. You can now login.</div>';
+        } else {
+            echo '<div class="notification error">Registration failed. Please try again later.</div>';
+        }
     }
 }
 
 $conn->close();
 ?>
-
-
-
-
 
 <!-- HTML form for registration -->
 <!DOCTYPE html>
@@ -43,10 +41,11 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="regstyle.css">
-    <script src="script.js"></script>
-    <script src="dynamic-image.js" defer></script>
+   
+    
     <title>AX_CHANGE</title>
 </head>
 <body>
@@ -68,7 +67,7 @@ $conn->close();
     </nav>
    
     </div>
-
+   
     <div class="ahh">
         <div class="kracken">
     <h2>Register</h2>
@@ -94,14 +93,7 @@ $conn->close();
        
 </div>
     </div>
-
-     <!-- WhatsApp and Telegram Icons -->
-     <div class="contact-icons">
-            <a href="whatsapp-link" target="_blank"><img src="img/whatsapp.png" alt="WhatsApp"></a>
-            <br>
-            <a href="telegram-link" target="_blank"><img src="img/telegram.png" alt="Telegram"></a>
-        </div>
-    </main>
+    
 
     <div class="foo">
     <footer style="background-color: black; padding: 10px 0; text-align: center;">
@@ -110,6 +102,7 @@ $conn->close();
         </p>
     </footer>
 </div>
+
 
 
 </body>

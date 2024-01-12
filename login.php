@@ -6,26 +6,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    $sql = "SELECT id, username, password FROM users WHERE username = '$username'";
-    $result = $conn->query($sql);
+    // Check if the entered username exists
+    $checkQuery = "SELECT * FROM users WHERE username = ?";
+    $checkStmt = $conn->prepare($checkQuery);
+    $checkStmt->bind_param("s", $username);
+    $checkStmt->execute();
+    $checkResult = $checkStmt->get_result();
 
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
+    if ($checkResult->num_rows > 0) {
+        $userRow = $checkResult->fetch_assoc();
 
-        if (password_verify($password, $row["password"])) {
-            $_SESSION["username"] = $row["username"];
+        // Check if the entered password is correct
+        if (password_verify($password, $userRow['password'])) {
+            $_SESSION['username'] = $username;
             header("Location: dashboard.php");
-            exit();
+            exit;
         } else {
-            echo "Invalid password.";
+            echo '<div class="notification error">Incorrect password. Please try again.</div>';
         }
     } else {
-        echo "User not found.";
+        echo '<div class="notification error">Username not found. Please check your username.</div>';
     }
 }
 
 $conn->close();
 ?>
+
 
 <!--ddhgfd-->
 <!DOCTYPE html>
@@ -35,6 +41,8 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="regstyle.css">
     <script src="script.js"></script>
     <script src="dynamic-image.js" defer></script>
     <title>AX_CHANGE</title>
@@ -75,15 +83,9 @@ $conn->close();
 </div>
     
 
-        <!-- WhatsApp and Telegram Icons -->
-        <div class="contact-icons">
-            <a href="whatsapp-link" target="_blank"><img src="img/whatsapp.png" alt="WhatsApp"></a>
-            <br>
-            <a href="telegram-link" target="_blank"><img src="img/telegram.png" alt="Telegram"></a>
-        </div>
-    </main>
+      
 
-    <div class="foo">
+<div class="foo">
     <footer style="background-color: black; padding: 10px 0; text-align: center;">
         <p style="font-family: 'Verdana', sans-serif; color: white; margin: 0;">
            AXCHANGE (c) 2023 Powered by <a href="###" style="font-family: 'Verdana', sans-serif; color: yellow; font-weight: bold; text-decoration: none;">SHRINE</a>

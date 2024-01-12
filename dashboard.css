@@ -170,3 +170,13 @@ button:hover {
     width: 100px;
     height: auto;
 }
+.user-details {
+    text-align: center;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.user-details p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 5px 0;
+}

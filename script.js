@@ -1,21 +1,23 @@
 // script.js
 
-// Function to show a pop-up notification
-function showNotification(message, type) {
-    const notificationElement = document.createElement('div');
-    notificationElement.className = `notification ${type}`;
-    notificationElement.textContent = message;
+document.addEventListener('DOMContentLoaded', function () {
+    const notificationDiv = document.getElementById('notification');
 
-    // Append the notification to the body
-    document.body.appendChild(notificationElement);
-}
+    function showNotification(message, type) {
+        // Create a new notification element
+        const notification = document.createElement('div');
+        notification.className = `notification ${type}`;
+        notification.textContent = message;
 
-// Function to close the pop-up notification
-function closeNotification() {
-    const notification = document.querySelector('.notification');
+        // Append the notification to the container
+        notificationDiv.appendChild(notification);
 
-    // Check if the notification exists before removing it
-    if (notification) {
-        notification.remove();
+        // Remove the notification after 3 seconds (3000 milliseconds)
+        setTimeout(() => {
+            notification.remove();
+        }, 3000);
     }
-}
+
+    // This ensures that the function is available globally
+    window.showNotification = showNotification;
+});

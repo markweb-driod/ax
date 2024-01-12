@@ -109,6 +109,5 @@ if (!isset($_SESSION['username'])) {
            AXCHANGE (c) 2023 Powered by <a href="###" style="font-family: 'Verdana', sans-serif; color: yellow; font-weight: bold; text-decoration: none;">SHRINE</a>
         </p>
     </footer>
-</div>
 </body>
 </html>

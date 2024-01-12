@@ -64,6 +64,7 @@ if (!isset($_SESSION['username'])) {
         </div> 
         <br>
         <h4>Access us via our online 24hr chat below:</h4>
+        <img src="bgs/pointing-down.png" alt="pointer" style="height:70px; width:70px;padding-left:120px;">
 
 </div>
 

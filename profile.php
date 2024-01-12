@@ -61,7 +61,30 @@ if (!isset($_SESSION['username'])) {
 
 </div>
 
+ <div class="user-details">
+        <?php
+        // Assuming you have a database connection $conn
+        include("db_connect.php"); // Include your database connection file
 
+        // Assuming the logged-in user's username is stored in $_SESSION['username']
+        $username = isset($_SESSION['username']) ? $_SESSION['username'] : "";
+
+        // Fetch user details from the database
+        $sql = "SELECT full_name, email, phone_number FROM users WHERE username = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+        $stmt->bind_result($fullName, $email, $phoneNumber);
+        $stmt->fetch();
+        $stmt->close();
+        $conn->close();
+        ?>
+
+        <p><strong>Full Name:</strong> <?php echo $fullName; ?></p>
+        <p><strong>Email:</strong> <?php echo $email; ?></p>
+        <p><strong>Username:</strong> <?php echo $username; ?></p>
+        <p><strong>Phone Number:</strong> <?php echo $phoneNumber; ?></p>
+    </div>
 
 
 
@@ -75,6 +98,7 @@ if (!isset($_SESSION['username'])) {
         </div> 
         <br>
         <h4>Access us via our online 24hr chat below:</h4>
+        <img src="bgs/pointing-down.png" alt="pointer" style="height:70px; width:70px;padding-left:170px;">
 
 </div>
 
@@ -100,6 +124,23 @@ if (!isset($_SESSION['username'])) {
             text-align: center;
         }
 
+        .user-details {
+            background-image: url(bgs/brick.jpg);
+        text-align: center;
+      height: 200px;
+      padding-top: 25px;
+        margin-top: 20px; /* Adjust as needed */
+        width:500px;
+        padding-left:30px
+    }
+
+    .user-details p {
+       
+        font-family:verdana;
+        font-size: 16px;
+        margin: 5px 0;
+        color: white;
+    }
     </style>
 
 <div class="foo">
